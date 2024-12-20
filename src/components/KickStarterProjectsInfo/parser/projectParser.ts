@@ -7,7 +7,7 @@ export const parseProject = (project: any): KickStarterProject => {
         blurb: project['blurb'],
         by: project['by'],
         country: project['country'],
-        currency: project['currency'],
+        currency: project['currency']?.toUpperCase() || '',
         endTime: new Date(project['end.time']),
         location: project['location'],
         percentageFunded: project['percentage.funded'],
