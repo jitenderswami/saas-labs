@@ -1,0 +1,135 @@
+.kickstarter-project-info-view {
+    padding: 20px;
+    max-height: 100vh;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.table-container {
+    margin: 20px 0;
+    overflow-x: auto;
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+
+.table-container::-webkit-scrollbar {
+    display: none;
+}
+
+.projects-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.projects-table th,
+.projects-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.projects-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.projects-table th:hover {
+    background-color: #e0e0e0;
+}
+
+.projects-table tr {
+    animation: slideIn 0.3s ease-out;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.projects-table tr:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.01);
+}
+
+.pagination-controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination-controls button {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.pagination-controls button:not(:disabled):hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.pagination-controls button:disabled {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.pagination-controls span {
+    animation: fadeIn 0.3s ease;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Loading state animation */
+.loading {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0.6;
+    }
+}
+
+/* Table row stagger effect */
+.projects-table tr:nth-child(1) { animation-delay: 0.1s; }
+.projects-table tr:nth-child(2) { animation-delay: 0.2s; }
+.projects-table tr:nth-child(3) { animation-delay: 0.3s; }
+.projects-table tr:nth-child(4) { animation-delay: 0.4s; }
+.projects-table tr:nth-child(5) { animation-delay: 0.5s; }
+.projects-table tr:nth-child(6) { animation-delay: 0.6s; }
+.projects-table tr:nth-child(7) { animation-delay: 0.7s; }
+.projects-table tr:nth-child(8) { animation-delay: 0.8s; }
+.projects-table tr:nth-child(9) { animation-delay: 0.9s; }
+.projects-table tr:nth-child(10) { animation-delay: 1s; }
